@@ -5,107 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love 💖</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
         body {
             text-align: center;
-            background: linear-gradient(135deg, #000000, #222222);
-            color: #FFD700;
             font-family: 'Arial', sans-serif;
-            overflow: hidden;
+            background-color: #000;
+            color: white;
         }
-
         .container {
             margin-top: 50px;
-            animation: fadeIn 2s ease-in-out;
         }
-
         h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3em;
-            color: #FFD700;
-            animation: glow 2s infinite alternate;
+            color: white;
+            font-size: 2.8em;
         }
-
         p {
-            color: #fff;
-            font-size: 1.5em;
-            margin: 20px;
-            opacity: 0;
-            animation: fadeInText 2s ease-in-out forwards;
+            color: silver;
+            font-size: 1.4em;
         }
-
         .button {
-            background-color: #FFD700;
-            color: #000;
-            padding: 15px 25px;
-            font-size: 1.2em;
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
             border: none;
             border-radius: 10px;
+            font-size: 1.2em;
             cursor: pointer;
+            margin-top: 20px;
             transition: 0.3s;
         }
-
         .button:hover {
-            background-color: #ffcc00;
-            transform: scale(1.1);
+            background-color: silver;
         }
-
-        .disabled {
-            background-color: grey;
-            cursor: not-allowed;
+        .hidden {
+            display: none;
         }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #FFD700; }
-            100% { text-shadow: 0 0 20px #ffcc00, 0 0 30px #FFD700; }
+        .music-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            animation: spin 4s linear infinite;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
-
-        @keyframes fadeInText {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photo-gallery img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
 <body>
+
+    <!-- Halaman 1 -->
     <div id="page1" class="container">
-        <h1>Hallo Sayangkuu! 💕</h1>
-        <p>Kamu sayang aku gak? 🥺</p>
-        <button class="button disabled">Sayang aja</button>
-        <button class="button" onclick="nextPage('page2')">Sayang banget! 😘</button>
+        <h1>Hallo Sayangkuu! 💖</h1>
+        <p>Aku punya sesuatu buat kamu... tapi sebelumnya aku tanya dulu ya~</p>
+        <p>Kamu sayang aku gak? 😘</p>
+        <button class="button" onclick="nextPage(2)">Sayang Banget! 💕</button>
+        <button class="button" disabled>Sayang aja 😏</button>
     </div>
 
-    <div id="page2" class="container" style="display:none;">
-        <h1>Psssttt tadiii... 😘</h1>
-        <p>Jujur deh, pas kamu milih "Sayang banget", jantung kamu deg-degan dikit gak? 😜</p>
-        <p>Kalau deg-degan, tandanya kamu cinta mati sama aku! 🥰💕</p>
-        <p>Eh tapi ada sesuatu buat kamu! 🎁 Coba tebak, aku mau kasih apa? 🤭</p>
-        <button class="button disabled">Cuma ucapan biasa</button>
-        <button class="button" onclick="nextPage('page3')">Hadiah super spesial! 🎀</button>
+    <!-- Halaman 2 -->
+    <div id="page2" class="container hidden">
+        <h1>Psssttt... 😏</h1>
+        <p>Karena kamu udah pilih yang bener, ada satu pertanyaan lagi nih! 😜</p>
+        <p>Apa aku pacar terbaik yang pernah kamu punya? 😘</p>
+        <button class="button" onclick="nextPage(3)">IYAAA! 💕</button>
+        <button class="button" disabled>Ehhh... 😏</button>
     </div>
 
-    <div id="page3" class="container" style="display:none;">
-        <h1>🎉 Happy Level Up, My Dearest Zii! 🏆✨</h1>
-        <p>Next Stage Unlocked: Level 27! 🎮<br>Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘<br>No matter what, I’ll always stand by your side! 💕✨</p>
-        <p>💖 "With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕"</p>
-        <audio controls autoplay>
-            <source src="https://example.com/green-day-last-night-on-earth.mp3" type="audio/mpeg">
+    <!-- Halaman 3 (Ucapan Ultah) -->
+    <div id="page3" class="container hidden">
+        <h1>🎉 Happy Level Up, Sayangku Zii! 🎮✨</h1>
+        <p>Next Stage Unlocked: Level 27! 🎮✨ Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘</p>
+        <p>Hari ini hari spesial buat kamu, tapi juga buat aku karena bisa ada di sampingmu. Aku bangga banget sama kamu dan semua yang udah kamu capai. 💖</p>
+        <p>Jangan pernah lupa kalau aku selalu ada buat kamu. Kamu harus janji buat selalu sayang sama aku, yaaa! 😘✨</p>
+        <p>With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕</p>
+
+        <!-- Slot Foto -->
+        <div class="photo-gallery">
+            <img src="your-photo-link-1.jpg" alt="Foto 1">
+            <img src="your-photo-link-2.jpg" alt="Foto 2">
+            <img src="your-photo-link-3.jpg" alt="Foto 3">
+            <img src="your-photo-link-4.jpg" alt="Foto 4">
+            <img src="your-photo-link-5.jpg" alt="Foto 5">
+            <img src="your-photo-link-6.jpg" alt="Foto 6">
+        </div>
+
+        <!-- Musik -->
+        <audio id="background-music" loop>
+            <source src="your-music-link.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+        <img src="https://cdn-icons-png.flaticon.com/512/66/66568.png" class="music-icon" onclick="toggleMusic()" alt="Music Icon">
+
     </div>
 
     <script>
         function nextPage(page) {
-            document.getElementById("page1").style.display = "none";
-            document.getElementById("page2").style.display = "none";
-            document.getElementById("page3").style.display = "none";
-            document.getElementById(page).style.display = "block";
+            document.getElementById("page" + (page - 1)).classList.add("hidden");
+            document.getElementById("page" + page).classList.remove("hidden");
+        }
+
+        function toggleMusic() {
+            var music = document.getElementById("background-music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
         }
     </script>
+
 </body>
 </html>
