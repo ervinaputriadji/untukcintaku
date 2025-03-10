@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You! 💙</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #0a192f;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: #112240;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.4);
+            border: 2px solid #ffd700;
+        }
+        h1 {
+            color: #ffd700;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        button {
+            background-color: #ffd700;
+            color: #0a192f;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #ffcc00;
+        }
+        img {
+            width: 250px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.4);
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="page1">
+        <h1>💙 Halo Ayang! 💛</h1>
+        <p>Ada sesuatu yang spesial buat kamu... 🥰 Klik tombol di bawah ya!</p>
+        <button onclick="nextPage(2)">Klik di sini!</button>
+    </div>
+
+    <div class="container" id="page2" style="display: none;">
+        <h1>🎉 Pssst... Ayang! 🎂</h1>
+        <p>Aku mau bilang sesuatu nih... 😘</p>
+        <p>Kamu itu orang paling spesial buat aku, dan aku bersyukur bisa ada di samping kamu! 💕</p>
+        <button onclick="nextPage(3)">Lanjutkan</button>
+    </div>
+
+    <div class="container" id="page3" style="display: none;">
+        <h1>💙 Happy Birthday, Sayang! 💛</h1>
+        <p>Next Stage Unlocked: Level 27! 🎮 Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘<br>No matter what, I’ll always stand by your side! 💕✨</p>
+        <img src="your-photo-link-here" alt="Foto Spesial">
+        <audio controls autoplay>
+            <source src="https://example-files.online-convert.com/audio/mp3/example.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function nextPage(page) {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById('page3').style.display = 'none';
+            
+            document.getElementById('page' + page).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
