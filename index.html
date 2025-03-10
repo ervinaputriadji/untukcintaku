@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Sayang! 💖</title>
+    <title>For My Love 💖</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
@@ -51,12 +51,9 @@
             transform: scale(1.1);
         }
 
-        .photo {
-            width: 300px;
-            border-radius: 15px;
-            margin: 20px;
-            box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
+        .disabled {
+            background-color: grey;
+            cursor: not-allowed;
         }
 
         @keyframes glow {
@@ -73,50 +70,42 @@
             0% { opacity: 0; transform: scale(0.8); }
             100% { opacity: 1; transform: scale(1); }
         }
-
-        /* Efek confetti */
-        .confetti {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            background-color: gold;
-            top: -10px;
-            opacity: 0.8;
-            animation: fall 3s linear infinite;
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(100vh) rotate(360deg); }
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 Happy Level Up, Zii ku Sayanggg! 🎮</h1>
-        <p>Next Stage Unlocked: Level 27! 🏆✨ Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘<br>No matter what, I’ll always stand by your side! 💕✨</p>
-        <img class="photo" src="your-photo-link-here" alt="Foto Spesial">
-        <br>
-        <button class="button" onclick="playMusic()">Klik untuk dengar lagu 🎶</button>
-        <audio id="birthdaySong" src="https://example.com/green-day-last-night-on-earth.mp3"></audio>
+    <div id="page1" class="container">
+        <h1>Hallo Sayangkuu! 💕</h1>
+        <p>Kamu sayang aku gak? 🥺</p>
+        <button class="button disabled">Sayang aja</button>
+        <button class="button" onclick="nextPage('page2')">Sayang banget! 😘</button>
+    </div>
+
+    <div id="page2" class="container" style="display:none;">
+        <h1>Psssttt tadiii... 😘</h1>
+        <p>Jujur deh, pas kamu milih "Sayang banget", jantung kamu deg-degan dikit gak? 😜</p>
+        <p>Kalau deg-degan, tandanya kamu cinta mati sama aku! 🥰💕</p>
+        <p>Eh tapi ada sesuatu buat kamu! 🎁 Coba tebak, aku mau kasih apa? 🤭</p>
+        <button class="button disabled">Cuma ucapan biasa</button>
+        <button class="button" onclick="nextPage('page3')">Hadiah super spesial! 🎀</button>
+    </div>
+
+    <div id="page3" class="container" style="display:none;">
+        <h1>🎉 Happy Level Up, My Dearest Zii! 🏆✨</h1>
+        <p>Next Stage Unlocked: Level 27! 🎮<br>Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘<br>No matter what, I’ll always stand by your side! 💕✨</p>
+        <p>💖 "With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕"</p>
+        <audio controls autoplay>
+            <source src="https://example.com/green-day-last-night-on-earth.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <script>
-        function playMusic() {
-            document.getElementById('birthdaySong').play();
+        function nextPage(page) {
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "none";
+            document.getElementById("page3").style.display = "none";
+            document.getElementById(page).style.display = "block";
         }
-
-        function createConfetti() {
-            for (let i = 0; i < 50; i++) {
-                let confetti = document.createElement("div");
-                confetti.classList.add("confetti");
-                confetti.style.left = Math.random() * window.innerWidth + "px";
-                confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
-                document.body.appendChild(confetti);
-            }
-        }
-
-        createConfetti();
     </script>
 </body>
 </html>
