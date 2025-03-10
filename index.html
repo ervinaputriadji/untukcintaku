@@ -3,171 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Sayang!</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .btn {
-            background: gold;
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-        .love {
-            position: absolute;
-            font-size: 2em;
-            color: red;
-            animation: float 4s linear infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-        }
-        .snow {
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background: white;
-            border-radius: 50%;
-            animation: snowfall 5s linear infinite;
-        }
-        @keyframes snowfall {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(100vh); opacity: 0; }
-        }
-        .stars {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: gold;
-            border-radius: 50%;
-            animation: twinkle 3s linear infinite;
-        }
-        @keyframes twinkle {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        .music-icon {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Vinyl_record.png') no-repeat center center;
-            background-size: cover;
-            border-radius: 50%;
-            animation: spin 4s linear infinite;
-            display: none;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <title>For My Love 💖</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 id="title">Halo Sayangkuu! 🖤</h1>
-        <p id="message">Kamu sayang aku nggak?</p>
-        <button class="btn" onclick="nextPage('Sayang aja')">Sayang aja</button>
-        <button class="btn" onclick="nextPage('Sayang banget')">Sayang banget</button>
-        <div id="loveContainer"></div>
-        <div id="snowContainer"></div>
-        <audio id="bgMusic" loop>
-            <source src="your-music-link-here.mp3" type="audio/mpeg">
-        </audio>
-        <div id="musicIcon" class="music-icon"></div>
+    <div id="page1" class="page">
+        <h1>Halo sayangkuu! Kamu siap buat kejutan ini? 😘</h1>
+        <button onclick="nextPage(2)">Klik di sini kalau kamu sayang aku!</button>
     </div>
 
-    <script>
-        let currentPage = 1;
+    <div id="page2" class="page">
+        <h1>Coba jawab jujur, kamu sayang aku apa nggaa? 🤨</h1>
+        <button disabled>Sayang dikit aja (Nggak bisa diklik 😜)</button>
+        <button onclick="nextPage(3)">sayang! bangetttt 💖</button>
+    </div>
 
-        function nextPage(choice) {
-            const title = document.getElementById('title');
-            const message = document.getElementById('message');
-            const bgMusic = document.getElementById('bgMusic');
-            const musicIcon = document.getElementById('musicIcon');
+    <div id="page3" class="page">
+        <h1>Hmmm... beneran? Aku masih ragu deh! 😏</h1>
+        <button disabled>Yaaa gitu deh (Nggak bisa diklik 😜)</button>
+        <button onclick="nextPage(4)">Beneran kok! Aku sayang bangett sama kamu! 💕</button>
+    </div>
 
-            if (currentPage === 9) {
-                generateHearts();
-                bgMusic.play();
-                musicIcon.style.display = "block";
-            }
+    <div id="page4" class="page">
+        <h1>Okeee! Terakhir, kamu mau aku peluk nggak? 😚</h1>
+        <button onclick="nextPage(5)">Mau banget! 🤗</button>
+    </div>
 
-            if (currentPage === 10) {
-                generateSnowAndStars();
-            }
+    <div id="page5" class="page">
+        <h1>Selamat! Kamu lulus uji sayang! 🎉🎊</h1>
+        <button onclick="nextPage(6)">Klik buat kejutan spesial!</button>
+    </div>
 
-            const pages = [
-                { title: "Pssttt... aku punya rahasia nih! 🤭", message: "Mau tahu nggak?" },
-                { title: "Aku mau kasih tahu sesuatu nih...", message: "Harus tetep sayang aku selamanya yaa! 😘" },
-                { title: "Hmm... aku ragu nih...", message: "Beneran sayang aku?" },
-                { title: "Siapa pacar paling cantik sedunia?", message: "Jawab yang bener yaa! 😍" },
-                { title: "Jawaban yang sangat tepat! ✨", message: "Hadiah buat kamu hampir sampai!" },
-                { title: "Udah siap dapet kejutan spesial dari aku?", message: "Klik tombol di bawah ya!" },
-                { title: "Oke, hitungan mundur yaa... 3...2...1...", message: "Tadaaa! 🎉" },
-                { title: "Happy Level Up, Zii Sayangkuu! 🎉💖", message: "<img src='https://drive.google.com/uc?export=download&id=11W7z93f7QbL6tSwD7d8LWQLPhu7fHxt1' width='300px'><br>Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘" },
-                { title: "Jangan lupa harus tetep sayang aku terus yaaa! 🤍✨", message: "<br>💖 With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕" }
-            ];
+    <div id="page6" class="page">
+        <h1>Psssttt... Aku punya sesuatu buat kamu! 🎁</h1>
+        <button onclick="nextPage(7)">Lihat hadiah dari aku!</button>
+    </div>
 
-            if (currentPage < pages.length) {
-                title.innerHTML = pages[currentPage - 1].title;
-                message.innerHTML = pages[currentPage - 1].message;
-                currentPage++;
-            }
-        }
+    <div id="page7" class="page">
+        <h1>Siap-siap yaaa, hitungan mundur... 3...2...1! 🎉</h1>
+        <button onclick="nextPage(8)">Buka sekarang!</button>
+    </div>
 
-        function generateHearts() {
-            const container = document.getElementById('loveContainer');
-            for (let i = 0; i < 30; i++) {
-                let heart = document.createElement("div");
-                heart.className = "love";
-                heart.innerHTML = "❤️";
-                heart.style.left = Math.random() * window.innerWidth + "px";
-                heart.style.top = Math.random() * window.innerHeight + "px";
-                heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-                container.appendChild(heart);
-            }
-        }
+    <div id="page8" class="page">
+        <h1>Happy Level Up, Sayangkuu Cintakuuu.... Zii! 🎉💖</h1>
+        <h1>Unlocked: Level 27! 🎮</h1>
+        <h1>Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘</h1>
+        <img src="https://drive.google.com/uc?export=download&id=11W7z93f7QbL6tSwD7d8LWQLPhu7fHxt1" alt="Foto Spesial">
+        <button onclick="nextPage(9)">Lanjut ke halaman spesial!</button>
+    </div>
 
-        function generateSnowAndStars() {
-            const snowContainer = document.getElementById('snowContainer');
-            for (let i = 0; i < 20; i++) {
-                let snow = document.createElement("div");
-                snow.className = "snow";
-                snow.style.left = Math.random() * window.innerWidth + "px";
-                snow.style.animationDuration = (Math.random() * 3 + 2) + "s";
-                snowContainer.appendChild(snow);
-            }
-            for (let i = 0; i < 10; i++) {
-                let star = document.createElement("div");
-                star.className = "stars";
-                star.style.left = Math.random() * window.innerWidth + "px";
-                star.style.top = Math.random() * window.innerHeight + "px";
-                star.style.animationDuration = (Math.random() * 3 + 2) + "s";
-                snowContainer.appendChild(star);
-            }
-        }
-    </script>
+    <div id="page9" class="page love-page">
+        <h1>Jangan lupa harus tetep sayang dann cintaa sama aku terus yaaa! 🤍✨</h1>
+        <audio id="music" controls loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="nextPage(10)">Klik buat halaman terakhir!</button>
+    </div>
+
+    <div id="page10" class="page snow-page">
+        <h1>💖 With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕</h1>
+        <p>Jangan pernah berubah ya, aku bakal selalu ada buat kamu! 💖✨</p>
+        <p>Semoga ulang tahun kali ini lebih spesial, karena ada aku di sini buat kamu! 🎂💖</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
