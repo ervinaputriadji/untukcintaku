@@ -4,68 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love 💖</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: white;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: white;
+            font-size: 2.8em;
+        }
+        p {
+            color: silver;
+            font-size: 1.4em;
+        }
+        .button {
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: silver;
+        }
+        .hidden {
+            display: none;
+        }
+        .music-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photo-gallery img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <div id="page1" class="page">
-        <h1>Halo sayangkuu! Kamu siap buat kejutan ini? 😘</h1>
-        <button onclick="nextPage(2)">Klik di sini kalau kamu sayang aku!</button>
+
+    <!-- Halaman 1 -->
+    <div id="page1" class="container">
+        <h1>Hallo Sayangkuu! 💖</h1>
+        <p>Aku punya sesuatu buat kamu... tapi sebelumnya aku tanya dulu ya~</p>
+        <p>Kamu sayang aku gak? 😘</p>
+        <button class="button" onclick="nextPage(2)">Sayang Banget! 💕</button>
+        <button class="button" disabled>Sayang aja 😏</button>
     </div>
 
-    <div id="page2" class="page">
-        <h1>Coba jawab jujur, kamu sayang aku apa nggaa? 🤨</h1>
-        <button disabled>Sayang dikit aja (Nggak bisa diklik 😜)</button>
-        <button onclick="nextPage(3)">sayang! bangetttt 💖</button>
+    <!-- Halaman 2 -->
+    <div id="page2" class="container hidden">
+        <h1>Psssttt... 😏</h1>
+        <p>Karena kamu udah pilih yang bener, ada satu pertanyaan lagi nih! 😜</p>
+        <p>Apa aku pacar terbaik yang pernah kamu punya? 😘</p>
+        <button class="button" onclick="nextPage(3)">IYAAA! 💕</button>
+        <button class="button" disabled>Ehhh... 😏</button>
     </div>
 
-    <div id="page3" class="page">
-        <h1>Hmmm... beneran? Aku masih ragu deh! 😏</h1>
-        <button disabled>Yaaa gitu deh (Nggak bisa diklik 😜)</button>
-        <button onclick="nextPage(4)">Beneran kok! Aku sayang bangett sama kamu! 💕</button>
-    </div>
+    <!-- Halaman 3 (Ucapan Ultah) -->
+    <div id="page3" class="container hidden">
+        <h1>🎉 Happy Level Up, Sayangku Zii! 🎮✨</h1>
+        <p>Next Stage Unlocked: Level 27! 🎮✨ Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘</p>
+        <p>Hari ini hari spesial buat kamu, tapi juga buat aku karena bisa ada di sampingmu. Aku bangga banget sama kamu dan semua yang udah kamu capai. 💖</p>
+        <p>Jangan pernah lupa kalau aku selalu ada buat kamu. Kamu harus janji buat selalu sayang sama aku, yaaa! 😘✨</p>
+        <p>With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕</p>
 
-    <div id="page4" class="page">
-        <h1>Okeee! Terakhir, kamu mau aku peluk nggak? 😚</h1>
-        <button onclick="nextPage(5)">Mau banget! 🤗</button>
-    </div>
+        <!-- Slot Foto -->
+        <div class="photo-gallery">
+            <img src="your-photo-link-1.jpg" alt="Foto 1">
+            <img src="your-photo-link-2.jpg" alt="Foto 2">
+            <img src="your-photo-link-3.jpg" alt="Foto 3">
+            <img src="your-photo-link-4.jpg" alt="Foto 4">
+            <img src="your-photo-link-5.jpg" alt="Foto 5">
+            <img src="your-photo-link-6.jpg" alt="Foto 6">
+        </div>
 
-    <div id="page5" class="page">
-        <h1>Selamat! Kamu lulus uji sayang! 🎉🎊</h1>
-        <button onclick="nextPage(6)">Klik buat kejutan spesial!</button>
-    </div>
-
-    <div id="page6" class="page">
-        <h1>Psssttt... Aku punya sesuatu buat kamu! 🎁</h1>
-        <button onclick="nextPage(7)">Lihat hadiah dari aku!</button>
-    </div>
-
-    <div id="page7" class="page">
-        <h1>Siap-siap yaaa, hitungan mundur... 3...2...1! 🎉</h1>
-        <button onclick="nextPage(8)">Buka sekarang!</button>
-    </div>
-
-    <div id="page8" class="page">
-        <h1>Happy Level Up, Sayangkuu Cintakuuu.... Zii! 🎉💖</h1>
-        <h1>Unlocked: Level 27! 🎮</h1>
-        <h1>Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘</h1>
-        <img src="https://drive.google.com/uc?export=download&id=11W7z93f7QbL6tSwD7d8LWQLPhu7fHxt1" alt="Foto Spesial">
-        <button onclick="nextPage(9)">Lanjut ke halaman spesial!</button>
-    </div>
-
-    <div id="page9" class="page love-page">
-        <h1>Jangan lupa harus tetep sayang dann cintaa sama aku terus yaaa! 🤍✨</h1>
-        <audio id="music" controls loop>
-            <source src="music.mp3" type="audio/mpeg">
+        <!-- Musik -->
+        <audio id="background-music" loop>
+            <source src="your-music-link.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
         </audio>
-        <button onclick="nextPage(10)">Klik buat halaman terakhir!</button>
+        <img src="https://cdn-icons-png.flaticon.com/512/66/66568.png" class="music-icon" onclick="toggleMusic()" alt="Music Icon">
+
     </div>
 
-    <div id="page10" class="page snow-page">
-        <h1>💖 With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕</h1>
-        <p>Jangan pernah berubah ya, aku bakal selalu ada buat kamu! 💖✨</p>
-        <p>Semoga ulang tahun kali ini lebih spesial, karena ada aku di sini buat kamu! 🎂💖</p>
-    </div>
+    <script>
+        function nextPage(page) {
+            document.getElementById("page" + (page - 1)).classList.add("hidden");
+            document.getElementById("page" + page).classList.remove("hidden");
+        }
 
-    <script src="script.js"></script>
+        function toggleMusic() {
+            var music = document.getElementById("background-music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+
 </body>
 </html>
