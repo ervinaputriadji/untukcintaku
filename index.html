@@ -86,48 +86,121 @@
         <button class="button" disabled>Ehhh... 😏</button>
     </div>
 
-    <!-- Halaman 3 (Ucapan Ultah) -->
+<!-- Halaman 3 -->
     <div id="page3" class="container hidden">
-        <h1>🎉 Happy Level Up, Sayangku Zii! 🎮✨</h1>
-        <p>Next Stage Unlocked: Level 27! 🎮✨ Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘</p>
-        <p>Hari ini hari spesial buat kamu, tapi juga buat aku karena bisa ada di sampingmu. Aku bangga banget sama kamu dan semua yang udah kamu capai. 💖</p>
-        <p>Jangan pernah lupa kalau aku selalu ada buat kamu. Kamu harus janji buat selalu sayang sama aku, yaaa! 😘✨</p>
-        <p>With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕</p>
-
-        <!-- Slot Foto -->
-        <div class="photo-gallery">
-            <img src="your-photo-link-1.jpg" alt="Foto 1">
-            <img src="your-photo-link-2.jpg" alt="Foto 2">
-            <img src="your-photo-link-3.jpg" alt="Foto 3">
-            <img src="your-photo-link-4.jpg" alt="Foto 4">
-            <img src="your-photo-link-5.jpg" alt="Foto 5">
-            <img src="your-photo-link-6.jpg" alt="Foto 6">
-        </div>
-
-        <!-- Musik -->
-        <audio id="background-music" loop>
-            <source src="your-music-link.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <img src="https://cdn-icons-png.flaticon.com/512/66/66568.png" class="music-icon" onclick="toggleMusic()" alt="Music Icon">
-
+        <h1>Okee dehh, aku percayaaa.... </h1>
+        <p>sekarangg aku kasih pertanyaan gampanggg 😏</p>
+        <p>Siapaa pacarr palingg cantikkk seduniaaaa???? 😘</p>
+        <button class="button" onclick="nextPage(4)">VINAA DONGGG! 💕</button>
+        <button class="button" disabled>Vina</button>
     </div>
 
-    <script>
-        function nextPage(page) {
-            document.getElementById("page" + (page - 1)).classList.add("hidden");
-            document.getElementById("page" + page).classList.remove("hidden");
-        }
+<!-- Halaman 4 -->
+    <div id="page4" class="container hidden">
+        <h1>AHAHHAHAHA of course, it"s meee.... </h1>
+        <p>sekarangg lanjuttt 😏</p>
+        <p>Kalau akuu ilangg 1 menittt, kamu bakall??</p>
+        <button class="button" onclick="nextPage(5)">Panik! Kirim chat ‘ayanggkuu di mana?’ tiap 1 detik! 😂💖💕</button>
+        <button class="button" disabled>biasa ajaaa</button>
+    </div>
 
-        function toggleMusic() {
-            var music = document.getElementById("background-music");
-            if (music.paused) {
-                music.play();
-            } else {
-                music.pause();
-            }
-        }
-    </script>
+<!-- Halaman 5 -->
+    <div id="page5" class="container hidden">
+        <h1>UTUTUTUUUU sweett bangetttsayangkuuu😘 </h1>
+        <p>next😏</p>
+        <p>Kalo aku minta kamu peluk sekarangg, kamuu bakall??</p>
+        <button class="button" onclick="nextPage(6)">Peluk sekarang juga, virtual dulu gapapa! 😘😂💖💕</button>
+        <button class="button" disabled>nanti aja, lagi sibukk poll</button>
+    </div>
 
-</body>
-</html>
+<!-- Halaman 6 -->
+    <div id="page6" class="container hidden">
+        <h1>AVVVVVV😘 gemesss bangett ayangggkkuuuu </h1>
+        <p>TERAKHIRRR yaaaaa😏</p>
+        <p>Kamu mau nemenin aku sampe kapann???</p>
+        <button class="button" onclick="nextPage(7)">SELAMANYAA LAMA LAMAA LAMAA POLL! sampe akhir hayat💍😂💖💕</button>
+        <button class="button" disabled>sampe abis duit sebab beliin vina jajann😂</button>
+    </div>
+    
+   <!-- Halaman 7 (Ucapan Ultah) -->
+<div id="page7" class="container hidden">
+    <h1>🎉 Happy Level Up, Sayangku Zii! 🎮✨</h1>
+    <p>Next Stage Unlocked: Level 27! 🎮✨ Semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘</p>
+    <p>Hari ini hari spesial buat kamu, tapi juga buat aku karena bisa ada di sampingmu. Aku bangga banget sama kamu dan semua yang udah kamu capai. 💖</p>
+    <p>Jangan pernah lupa kalau aku selalu ada buat kamu. Kamu harus janji buat selalu sayang sama aku, yaaa! 😘✨</p>
+    <p>With love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA! 😘✨💕</p>
+
+    <!-- Slot Foto -->
+    <div class="photo-gallery">
+        <img src="your-photo-link-1.jpg" alt="Foto 1">
+        <img src="your-photo-link-2.jpg" alt="Foto 2">
+        <img src="your-photo-link-3.jpg" alt="Foto 3">
+        <img src="your-photo-link-4.jpg" alt="Foto 4">
+        <img src="your-photo-link-5.jpg" alt="Foto 5">
+        <img src="your-photo-link-6.jpg" alt="Foto 6">
+    </div>
+
+    <!-- Musik -->
+    <audio id="background-music" loop>
+        <source src="your-music-link.mp3" type="audio/mpeg">
+
+    </audio>
+    <img src="https://cdn-icons-png.flaticon.com/512/66/66568.png" class="music-icon" onclick="toggleMusic()" alt="Music Icon">
+</div>
+
+<!-- Efek Salju -->
+<style>
+    .snowflake {
+        position: fixed;
+        top: -10px;
+        font-size: 14px;
+        color: white;
+        opacity: 0.8;
+        animation: fallSnow linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes fallSnow {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(100vh);
+        }
+    }
+</style>
+
+<script>
+    function nextPage(page) {
+        document.getElementById("page" + (page - 1)).classList.add("hidden");
+        document.getElementById("page" + page).classList.remove("hidden");
+
+        // Aktifkan efek salju saat halaman 7 dibuka
+        if (page === 7) {
+            setInterval(createSnowflake, 250);
+        }
+    }
+
+    function toggleMusic() {
+        var music = document.getElementById("background-music");
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
+    }
+
+    function createSnowflake() {
+        let snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.innerHTML = "❄";
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.animationDuration = (Math.random() * 5 + 3) + "s"; // Kecepatan acak
+        snowflake.style.fontSize = (Math.random() * 10 + 10) + "px"; // Ukuran acak 10px-20px
+        document.body.appendChild(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+        }, 7000); // Hapus setelah 7 detik
+    }
+</script>
