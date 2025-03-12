@@ -62,9 +62,10 @@
     <div class="container">
         <p>aku punya sesuatu buat ayangg! klik di bawah ya 😘</p>
         <div class="envelope">
-            <a href="page1">buka di sini 💌</a>
+           <div class="envelope" onclick="showPage1()">
+            <span>buka di sini 💌</span>
         </div>
-    </div>
+        </div>
 </body>
 
     <style>
@@ -136,13 +137,20 @@ color: dark gray;
 <body>
 
     <!-- Halaman 1  -->
-    <div id="page1" class="container">
+    <div class="container hidden" id="page1">
         <h1>allo sayangkuu! 💖</h1>
         <p>sebelum ke "sesuatu" yang aku bilang di awal, aku tanya dulu ya~</p>
         <p>ayangg tuu sayang sama aku gak sii?😣 </p>
         <button class="button" onclick="nextPage(2)">sayanggg bangett lahh! 💕</button>
         <button class="button" disabled>sayang aja</button>
     </div>
+
+    <script>
+        function showPage1() {
+            document.getElementById("intro").classList.add("hidden");
+            document.getElementById("page1").classList.remove("hidden");
+        }
+    </script>
 
     <!-- Halaman 2 -->
     <div id="page2" class="container hidden">
