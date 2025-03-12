@@ -6,70 +6,6 @@
     <title>For My Love 💖</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f9f9f9;
-            text-align: center;
-            font-family: 'Indie Flower', cursive;
-            transition: background-color 0.5s ease-in-out;
-        }
-        .container {
-            position: relative;
-        }
-        p {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-        .envelope {
-            width: 120px;
-            height: 100px;
-            background-color: #ffcccb;
-            position: relative;
-            cursor: pointer;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .envelope::before {
-            content: "";
-            position: absolute;
-            top: -20px;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 20px solid #ffcccb;
-        }
-        a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <!-- Halaman Intro -->
-    <div class="container" id="intro">
-        <h1>haii! </h1>
-        <p>aku punya sesuatu buat ayangg😘</p>
-<p> </p>
-        <div class="envelope" onclick="showPage1()">
-            <span>buka di sini 💌</span>
-        </div>
-    </div>
-
-
-    <style>
-        body {
             text-align: center;
             font-family: 'Caveat', cursive;
             background: white;
@@ -136,23 +72,15 @@ color: dark gray;
 </head>
 <body>
 
-  <!-- Halaman 1 (Disembunyikan Dulu) -->
-    <div class="container hidden" id="page1">
-        <h1>allo sayangkuu cintakuuu! 💖</h1>
-        <p>sebelum ke "sesuatu" yang aku bilang di awal, aku tanya dulu ya~</p>
+    <!-- Halaman 1 -->
+    <div id="page1" class="container">
+        <h1>allo sayangkuu! 💖</h1>
+        <p>aku punya sesuatu buat ayanggg... tapi sebelumnya aku tanya dulu ya~</p>
         <p>ayangg tuu sayang sama aku gak sii?😣 </p>
         <button class="button" onclick="nextPage(2)">sayanggg bangett lahh! 💕</button>
         <button class="button" disabled>sayang aja</button>
     </div>
-  <script>
-        function showPage1() {
-            document.getElementById("intro").classList.add("hidden");
-            document.getElementById("page1").classList.remove("hidden");
-        }
-    </script>
-</body>
-</html>
-    
+
     <!-- Halaman 2 -->
     <div id="page2" class="container hidden">
         <h1>ciiieee~ aduhh jadi malu nihh~ 🙈💕 wkwk</h1>
@@ -201,7 +129,7 @@ color: dark gray;
     </div>
     
    <!-- Halaman 7 (Ucapan Ultah) -->
-<div id="page7" class="container">
+<div id="page7" class="container hidden">
     <!-- Musik -->
 <div>
     <iframe width="290" height="50" src="https://vocaroo.com/embed/11vubAEzaNyn?autoplay=0" frameborder="0" allow="autoplay"></iframe>
