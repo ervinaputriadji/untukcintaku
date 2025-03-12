@@ -6,6 +6,64 @@
     <title>For My Love 💖</title>
     <style>
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+        }
+        .container {
+            position: relative;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .envelope {
+            width: 100px;
+            height: 80px;
+            background-color: #ffcccb;
+            position: relative;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .envelope::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 20px solid #ffcccb;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>haii!😘</p>
+        <div class="envelope">
+            <a href="page1">buka di sini 💌</a>
+        </div>
+    </div>
+</body>
+</html>
+
+    <style>
+        body {
             text-align: center;
             font-family: 'Caveat', cursive;
             background: white;
@@ -72,72 +130,64 @@ color: dark gray;
 </head>
 <body>
 
-<!-- Halaman 1 -->
+    <!-- Halaman 1 -->
     <div id="page1" class="container">
-        <h1>hii! 💖</h1>
-        <p>aku punya sesuatu buat ayanggg~</p>
-        <button class="button" onclick="nextPage(2)">📩 buka disini! 💕</button>
-    </div>
-
-    
-    <!-- Halaman 2 -->
-    <div id="page2" class="container">
-        <h1>allo sayangkuu cintakuuuu!😘💖</h1>
-        <p>sebelum lanjut ke "sesuatu" yang aku bilang di awal, aku tanya dulu ya~</p>
+        <h1>allo sayangkuu cintakuuu! 💖</h1>
+        <p>aku punya sesuatu buat ayanggg... tapi sebelumnya aku tanya dulu ya~</p>
         <p>ayangg tuu sayang sama aku gak sii?😣 </p>
-        <button class="button" onclick="nextPage(3)">sayanggg bangett lahh! 💕</button>
+        <button class="button" onclick="nextPage(2)">sayanggg bangett lahh! 💕</button>
         <button class="button" disabled>sayang aja</button>
     </div>
 
-    <!-- Halaman 3 -->
-    <div id="page3" class="container hidden">
+    <!-- Halaman 2 -->
+    <div id="page2" class="container hidden">
         <h1>ciiieee~ aduhh jadi malu nihh~ 🙈💕 wkwk</h1>
         <p>tapiiii, akuu ada pertanyaan lagi, hehe!😜</p>
         <p>jujur dari hati mungill ayangg, aku pacar terbaik yang pernah ayangg punya kan? kann? kannn??😘💕</p>
-        <button class="button" onclick="nextPage(4)">IYAAALAH PASTI!😘💕</button>
+        <button class="button" onclick="nextPage(3)">IYAAALAH PASTI!😘💕</button>
         <button class="button" disabled>bukan lahh</button>
+    </div>
+
+<!-- Halaman 3 -->
+    <div id="page3" class="container hidden">
+        <h1>haha!! okee dehh, aku percayaaa 100000000%!!😘 </h1>
+        <p>sekarangg aku kasih pertanyaan gampanggg😜</p>
+        <p>coba tebakkk, siapa pacar paling cantik se-duniaaaaa?? 😘💖</p>
+        <button class="button" onclick="nextPage(4)">VINAA DONGGG!😘💕</button>
+        <button class="button" disabled>vina</button>
     </div>
 
 <!-- Halaman 4 -->
     <div id="page4" class="container hidden">
-        <h1>haha!! okee dehh, aku percayaaa 100000000%!!😘 </h1>
-        <p>sekarangg aku kasih pertanyaan gampanggg😜</p>
-        <p>coba tebakkk, siapa pacar paling cantik se-duniaaaaa?? 😘💖</p>
-        <button class="button" onclick="nextPage(5)">VINAA DONGGG!😘💕</button>
-        <button class="button" disabled>vina</button>
+        <h1>AHAHHAHAHA of course, siapa lagii kalo bukan AKUU!😂💖💕 </h1>
+        <p>sekarang lanjuttt yaa, siap-siap jawab! 😘🔥 </p>
+        <p>kalo akuu ilangg 1 menittt, ayangg bakall??😜</p>
+        <button class="button" onclick="nextPage(5)">panik! langsung samperinn! 😂💖💕</button>
+        <button class="button" disabled>biasa ajaaa</button>
     </div>
 
 <!-- Halaman 5 -->
     <div id="page5" class="container hidden">
-        <h1>AHAHHAHAHA of course, siapa lagii kalo bukan AKUU!😂💖💕 </h1>
-        <p>sekarang lanjuttt yaa, siap-siap jawab! 😘🔥 </p>
-        <p>kalo akuu ilangg 1 menittt, ayangg bakall??😜</p>
-        <button class="button" onclick="nextPage(6)">panik! langsung samperinn! 😂💖💕</button>
-        <button class="button" disabled>biasa ajaaa</button>
-    </div>
-
-<!-- Halaman 6 -->
-    <div id="page6" class="container hidden">
         <h1>UTUTUTUUUU sweett bangettt sayangkuuu iniiii 😘 WKWKWKWK😜 </h1>
         <p>next yaaa bubbbb😘</p>
         <p>kalo aku minta ayangg peluk sekarangg, ayangg bakall??👉👈</p>
-        <button class="button" onclick="nextPage(7)">PELUUUK EXPRESS LAGI MELUNCURRR~
+        <button class="button" onclick="nextPage(6)">PELUUUK EXPRESS LAGI MELUNCURRR~
  OTW TERBANG KE AYANGG, TUNGGU DI TEMPAT YA!✈️🤗💕</button>
         <button class="button" disabled>nanti aja, lagi sibukk poll</button>
     </div>
 
-<!-- Halaman 7 -->
-    <div id="page7" class="container hidden">
+<!-- Halaman 6 -->
+    <div id="page6" class="container hidden">
         <h1>AVVVVVV😘 pesona ayangg pull effortt! ahahahah😜 </h1>
         <p>TERAKHIRRR dehh yaaaaa😘</p>
         <p></p>kita lanjut ke pertanyaan paling penting!! 😆🔥</p>
         <p>ayangg mau nemenin aku sampe kapann???👉👈</p>
-        <button class="button" onclick="nextPage(8)">AKU MAU SAMA AYANGG TERUS, DI DUNIA IYA, DI SURGA JUGAA!! 🥺💍💞💍😂💖💕</button>
+        <button class="button" onclick="nextPage(7)">AKU MAU SAMA AYANGG TERUS, DI DUNIA IYA, DI SURGA JUGAA!! 🥺💍💞💍😂💖💕</button>
         <button class="button" disabled>sampe abis duit sebab beliin vina jajann😂</button>
     </div>
     
-   <!-- Halaman 8 (Ucapan Ultah) -->
-<div id="page8" class="container hidden">
+   <!-- Halaman 7 (Ucapan Ultah) -->
+<div id="page7" class="container hidden">
     <!-- Musik -->
 <div>
     <iframe width="290" height="50" src="https://vocaroo.com/embed/11vubAEzaNyn?autoplay=0" frameborder="0" allow="autoplay"></iframe>
@@ -188,10 +238,10 @@ color: dark gray;
 
 
 <script>
-    // Deteksi jika ada halaman 8
+    // Deteksi jika ada halaman 7
     document.addEventListener("DOMContentLoaded", function() {
-        var isPage8 = window.location.href.includes("page8"); // Ubah sesuai URL halaman 8
-        if (isPage8) {
+        var isPage7 = window.location.href.includes("page7"); // Ubah sesuai URL halaman 7
+        if (isPage7) {
             var audio = document.getElementById("background-music");
             audio.play().catch(error => {
                 console.log("Autoplay dicegah oleh browser, user harus klik.");
@@ -238,8 +288,8 @@ color: dark gray;
         document.getElementById("page" + (page - 1)).classList.add("hidden");
         document.getElementById("page" + page).classList.remove("hidden");
 
-        // Aktifkan efek salju saat halaman 8 dibuka
-        if (page === 8) {
+        // Aktifkan efek salju saat halaman 7 dibuka
+        if (page === 7) {
             setInterval(createSnowflake, 250);
         }
     }
