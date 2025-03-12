@@ -3,6 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise untuk Ayang!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+        }
+        .container {
+            position: relative;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .envelope {
+            width: 100px;
+            height: 80px;
+            background-color: #ffcccb;
+            position: relative;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .envelope::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 20px solid #ffcccb;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+    <!-- Halaman Intro (sebelum halaman 1) -->
+<body>
+    <div class="container">
+        <p>haii sayang, aku punya sesuatu buat kamu! klik di bawah ya 😘</p>
+        <div class="envelope">
+            <a href="halaman1.html">buka di sini 💌</a>
+        </div>
+    </div>
+</body>
+</html>
+
     <title>For My Love 💖</title>
     <style>
         body {
