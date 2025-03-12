@@ -18,22 +18,18 @@
             color: white;
             font-family: 'Georgia', sans-serif;
             font-size: 1.2em;
+              opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         p {
             color: silver;
             font-family: 'Times New Roman', sans-serif;
             font-size: 1em;
-        }
-        .hidden {
-    opacity: 0;
+              opacity: 0;
     transform: translateX(-50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
-}
+        }
 
         .button {
             font-family: 'Verdana', sans-serif;
