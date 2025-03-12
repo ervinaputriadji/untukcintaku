@@ -71,14 +71,21 @@
 </head>
 <body>
 
-    <!-- Halaman 1 -->
-    <div id="page1" class="container">
-        <h1>allo sayangkuu! 💖</h1>
-        <p>aku punya sesuatu buat ayanggg... tapi sebelumnya aku tanya dulu ya~</p>
-        <p>ayangg tuu sayang aku gak sii? 😘</p>
-        <button class="button" onclick="nextPage(2)">sayanggg bangett lahh! 💕</button>
-        <button class="button" disabled>sayang aja</button>
-    </div>
+<!-- Halaman Sapaan -->
+<div id="introPage" class="container">
+    <h1 id="intro-h1" class="typing">Allo ayangg! 💖</h1>
+    <p id="intro-p1" class="typing">Aku punya sesuatu spesial buat kamu, tapi sebelum itu...</p>
+    <button id="intro-btn" class="button" onclick="showPage1()">Klik di sini untuk lanjut 💕</button>
+</div>
+
+<!-- Halaman 1 (disembunyikan dulu) -->
+<div id="page1" class="container" style="display: none;">
+    <h1 id="type-h1" class="typing">allo sayangkuu! 💖</h1>
+    <p id="type-p1" class="typing">ayangg tuu sayang aku gak sii? 😘</p>
+    <button id="type-btn1" class="button" onclick="nextPage(2)" style="opacity: 0;">sayanggg bangett lahh! 💕</button>
+    <button id="type-btn2" class="button" disabled style="opacity: 0;">sayang aja</button>
+</div>
+
 
     <!-- Halaman 2 -->
     <div id="page2" class="container hidden">
@@ -173,6 +180,12 @@
 
 
 <script>
+    function showPage1() {
+    document.getElementById("introPage").style.display = "none"; // Sembunyikan halaman sapaan
+    document.getElementById("page1").style.display = "block"; // Tampilkan halaman 1
+}
+
+    
     // Deteksi jika ada halaman 7
     document.addEventListener("DOMContentLoaded", function() {
         var isPage7 = window.location.href.includes("page7"); // Ubah sesuai URL halaman 7
@@ -193,6 +206,8 @@
             audio.pause();
         }
     }
+
+
 </script>
 
 
