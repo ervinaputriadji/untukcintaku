@@ -5,14 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love 💖</title>
     <style>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love 💖</title>
+    <style>
         body {
             text-align: center;
             font-family: 'Georgia', sans-serif;
-            background-color: #0A1F44;
-            color: white;
+            background-color: #000;
+            color: silver;
         }
         .container {
             margin-top: 50px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .button {
+            font-family: 'Verdana', sans-serif;
+            background-color: silver;
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Efek balon */
+        .balloon-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background: radial-gradient(circle, white, silver);
+            border-radius: 50%;
+            position: relative;
+        }
+        .balloon::after {
+            content: '';
+            width: 2px;
+            height: 40px;
+            background: white;
+            position: absolute;
+            left: 50%;
+            top: 70px;
+        }
+        /* Efek birthday cake */
+        .cake-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .cake {
+            width: 50px;
+            height: 50px;
+            background: url('https://cdn-icons-png.flaticon.com/512/2917/2917995.png') no-repeat center;
+            background-size: contain;
+        }
+       
         }
         h1 {
             color: white;
@@ -24,24 +97,7 @@
             font-family: 'Times New Roman', sans-serif;
             font-size: 1em;
         }
-        .button {
-            font-family: 'Verdana', sans-serif;
-            background-color: white;
-            color: dark navy;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1em;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .button:hover {
-            background-color: dark navy;
-        }
-        .hidden {
-            display: none;
-        }
+
         .music-icon {
             position: fixed;
             top: 20px;
@@ -136,7 +192,14 @@
 
 <!-- Ikon Musik -->
 <img src="https://cdn-icons-png.flaticon.com/512/66/66568.png" class="music-icon" onclick="window.open('https://voca.ro/11vubAEzaNyn', '_blank')" alt="Music Icon">
-
+<!-- Halaman 7 (Ucapan Ultah) -->
+<div id="page7" class="container hidden">
+    <!-- Efek balon atas -->
+    <div class="balloon-container">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
     <h1>🎉 Happy Level Up, PACAR KESAYANGAN AKU, Zii! 🎮✨</h1>
 
     <p>Next Stage Unlocked: Level 27! 🎮✨ semoga di level ini makin kuat, makin sukses, dan makin sayang sama aku! 😘</p>
@@ -170,6 +233,13 @@
       <p>sekali lagii, selamat 27 tahunn yaa pacarr akuuu! 😘✨💕</p>
   <p>-with love, from your prettiest (and cutest) girlfriend you’ll ever have—VINA CANTIKK! 😘✨💕</p>
     
+ <!-- Efek birthday cake bawah -->
+    <div class="cake-container">
+        <div class="cake"></div>
+        <div class="cake"></div>
+        <div class="cake"></div>
+    </div>
+</div>
 
 
 <script>
