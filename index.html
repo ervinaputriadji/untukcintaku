@@ -13,6 +13,7 @@
             background-color: #f9f9f9;
             text-align: center;
             font-family: 'Indie Flower', cursive;
+            transition: background-color 0.5s ease-in-out;
         }
         .container {
             position: relative;
@@ -50,17 +51,20 @@
             font-size: 16px;
             font-weight: bold;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p>haii!😘</p>
-        <div class="envelope">
-            <a href="page1">buka di sini 💌</a>
+    <!-- Halaman Intro -->
+    <div class="container" id="intro">
+        <p>haii! aku punya sesuatu buat ayangg😘</p>
+        <div class="envelope" onclick="showPage1()">
+            <span>buka di sini 💌</span>
         </div>
     </div>
-</body>
-</html>
+
 
     <style>
         body {
@@ -130,15 +134,23 @@ color: dark gray;
 </head>
 <body>
 
-    <!-- Halaman 1 -->
-    <div id="page1" class="container">
+  <!-- Halaman 1 (Disembunyikan Dulu) -->
+    <div class="container hidden" id="page1">
         <h1>allo sayangkuu cintakuuu! 💖</h1>
-        <p>aku punya sesuatu buat ayanggg... tapi sebelumnya aku tanya dulu ya~</p>
+        <p>sebelum ke "sesuatu" yang aku bilang di awal, aku tanya dulu ya~</p>
         <p>ayangg tuu sayang sama aku gak sii?😣 </p>
         <button class="button" onclick="nextPage(2)">sayanggg bangett lahh! 💕</button>
         <button class="button" disabled>sayang aja</button>
     </div>
-
+  <script>
+        function showPage1() {
+            document.getElementById("intro").classList.add("hidden");
+            document.getElementById("page1").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
+    
     <!-- Halaman 2 -->
     <div id="page2" class="container hidden">
         <h1>ciiieee~ aduhh jadi malu nihh~ 🙈💕 wkwk</h1>
